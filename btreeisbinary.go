@@ -10,7 +10,7 @@ func BTreeIsBinary(root *TreeNode) bool {
 	if root.Right != nil && root.Right.Data < root.Data {
 		return false
 	}
-	if !BTreeIsBinary(root.Left) ||  !BTreeIsBinary(root.Right) {
+	if !BTreeIsBinary(root.Left) || !BTreeIsBinary(root.Right) {
 		return false
 	}
 	return true
