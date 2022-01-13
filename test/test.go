@@ -6,14 +6,10 @@ import (
 )
 
 func main() {
-	link := &piscine.List{}
+	root := &piscine.TreeNode{Data: "4"}
+	piscine.BTreeInsertData(root, "1")
+	piscine.BTreeInsertData(root, "7")
+	piscine.BTreeInsertData(root, "5")
+	piscine.BTreeApplyInorder(root, fmt.Println)
 
-	piscine.ListPushBack(link, "hello")
-	piscine.ListPushBack(link, "how are")
-	piscine.ListPushBack(link, "you")
-	piscine.ListPushBack(link, 1)
-
-	fmt.Println(piscine.ListAt(link.Head, 3).Data)
-	fmt.Println(piscine.ListAt(link.Head, 1).Data)
-	fmt.Println(piscine.ListAt(link.Head, 7))
 }
